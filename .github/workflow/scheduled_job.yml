@@ -22,4 +22,4 @@ jobs:
           python -m pip install --upgrade pip
 
       - name: Run Python Script
-        run: python ducoSender.py # Sesuaikan dengan nama skrip Python Anda
+        run: python ../../ducoSender.py # Sesuaikan dengan nama skrip Python Anda
