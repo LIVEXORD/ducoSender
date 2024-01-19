@@ -2,7 +2,7 @@ name: Scheduled Python Script
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Menjalankan setiap hari pukul 00:00 UTC
+    - cron: '0 4 * * *' # Menjalankan setiap hari pukul 04:00 UTC
 
 jobs:
   run-script:
@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.10.12 # Sesuaikan dengan versi Python yang Anda gunakan
+          python-version: 3.x
 
       - name: Install Dependencies
         run: |
@@ -23,4 +23,4 @@ jobs:
           pip install requests
 
       - name: Run Python Script
-        run: python ducoSender.py # Sesuaikan dengan nama skrip Python Anda
+        run: python .github/workflows/ducoSender.py
